@@ -1,0 +1,14 @@
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\bin\Debug\net8.0\TuTiempo.exe
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\bin\Debug\net8.0\TuTiempo.deps.json
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\bin\Debug\net8.0\TuTiempo.runtimeconfig.json
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\bin\Debug\net8.0\TuTiempo.dll
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\bin\Debug\net8.0\TuTiempo.pdb
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.AssemblyInfoInputs.cache
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.AssemblyInfo.cs
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.csproj.CoreCompileInputs.cache
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.dll
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\refint\TuTiempo.dll
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.pdb
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\TuTiempo.genruntimeconfig.cache
+C:\Users\.NET\source\repos\TuTiempo\TuTiempo\obj\Debug\net8.0\ref\TuTiempo.dll
