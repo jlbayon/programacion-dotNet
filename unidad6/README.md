@@ -2,7 +2,7 @@
 # 📘 Acceso a bases de datos con ADO.NET
 
 ## 1. ¿Qué es ADO.NET?
-- Es un conjunto de clases de .NET Framework (y .NET Core/5/6+) para acceder a datos.
+- Es un conjunto de clases de .NET Framework para acceder a datos.
 - Permite trabajar con bases de datos relacionales (SQL Server, Oracle, MySQL, etc.) y también con fuentes no relacionales (XML, servicios).
 - Dos modos principales de trabajo:
   1. **Conectado** → se mantiene abierta la conexión mientras se usan los datos.  
@@ -94,20 +94,10 @@ dataGridView1.DataSource = tabla; // tabla es un DataTable con los datos
 ---
 
 ## 6. Buenas prácticas
-- Usar `using` para cerrar automáticamente conexiones.  
-- Parametrizar consultas (`SqlParameter`) para evitar **SQL Injection**.  
+- Usar `using` para cerrar automáticamente conexiones.   
 - Evitar mantener conexiones abiertas más tiempo del necesario.  
 - Usar DataReader para lectura rápida y DataAdapter/DataSet para escenarios desconectados.  
 
----
-
-📌 **Ejemplo de parametrización:**
-```csharp
-SqlCommand comando = new SqlCommand("SELECT * FROM Clientes WHERE Id = @id", conexion);
-comando.Parameters.AddWithValue("@id", 1);
-```
-
----
 
 ## 7. Resumen visual
 - **ADO.NET** → Framework para acceder a datos.  
