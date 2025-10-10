@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TuTiempo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aec0fddba5b5731b99a12eae572fe1a2302a34a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8a80cbbc2157f268e092646522a4d2707794508")]
 [assembly: System.Reflection.AssemblyProductAttribute("TuTiempo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TuTiempo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
