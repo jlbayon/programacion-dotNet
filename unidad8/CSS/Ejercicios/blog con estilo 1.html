@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento con Modelo de Caja</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno y responsive -->
+ <!--   <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+        /* 1. RESET CRÍTICO: Aplica box-sizing: border-box a todos los elementos.
+           Esto significa que el 'width' y 'height' incluyen el padding y el border,
+           facilitando mucho el cálculo de dimensiones. (Modelo de caja moderno) */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* 2. ESTILOS BASE para el body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Fondo gris muy claro */
+            margin: 0; /* Elimina el margen por defecto del body */
+            padding: 0;
+        }
+
+        /* 3. APLICACIÓN DEL MODELO DE CAJA A ELEMENTOS ESTRUCTURALES */
+
+        /* HEADER: Ejemplo de contenedor con margen y padding */
+        header {
+            background-color: #1e40af; /* Azul oscuro */
+            color: #ffffff;
+            /* CONTENT: Ocupado por h1 */
+            padding: 24px; /* Relleno interior (espacio entre el contenido y el borde) */
+            border: 4px solid #10b981; /* Borde sólido de 4px (verde esmeralda) */
+            margin-bottom: 32px; /* Margen exterior (espacio entre el elemento y los demás) */
+            text-align: center;
+        }
+
+        /* DIV: Un simple contenedor para demostrar padding y borde */
+        div {
+            background-color: #bfdbfe; /* Azul muy claro */
+            /* CONTENT: Ocupado por p */
+            padding: 16px 24px;
+            border: 2px dashed #3b82f6; /* Borde discontinuo */
+            margin: 0 5%; /* Margen del 5% a izquierda y derecha */
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        /* ARTICLES (POSTS): La demostración más clara del modelo de caja */
+        .post {
+            background-color: #ffffff;
+            /* Ancho máximo para que se vea el margen lateral */
+            max-width: 320px;
+            /* CONTENT: Ocupado por h2, p, img */
+            padding: 20px; /* Padding interior */
+            border: 8px solid #ef4444; /* Borde sólido grueso (rojo) */
+            margin: 20px; /* Margen exterior para separarse de otros posts y de la sección */
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajuste para las imágenes dentro de los posts */
+        .post img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        /* FOOTER: Con un borde superior distintivo */
+        footer {
+            background-color: #374151; /* Gris oscuro */
+            color: #d1d5db;
+            /* CONTENT: Ocupado por a, br, p */
+            padding: 20px; /* Relleno interior */
+            border-top: 6px double #fcd34d; /* Borde superior doble (amarillo) */
+            margin-top: 40px; /* Margen superior para separarse del contenido */
+            text-align: center;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        
+        /* RESPONSIVIDAD: La sección de artículos usa Flexbox para que se vean uno al lado del otro en pantallas grandes */
+        @media (min-width: 768px) {
+            section {
+                display: flex;
+                /* Permite que los artículos se envuelvan a la siguiente línea si no caben */
+                flex-wrap: wrap; 
+                /* Centra los artículos horizontalmente */
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="text-3xl font-bold">Nombre del Blog (Elemento BLOCK)</h1>
+    </header>
+    
+    <div class="max-w-7xl mx-auto px-4">
+        <p class="text-gray-700">Soy un párrafo dentro de un div. El DIV tiene un margen del 5% a los lados y un borde azul discontinuo. El padding interno se encarga de separar el texto de ese borde. ¡Este es el modelo de caja en acción!</p>
+    </div>
+
+    <section class="p-4">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Nuestros Artículos (Container Flex)</h2>
+        <!-- Esta sección usa Flexbox para organizar las cajas de los artículos -->
+        
+        <article class="post">
+            <h2 class="text-xl font-bold mb-2">Título de mi post</h2>
+            <p class="text-sm italic">Descripción de mi post</p>
+            <!-- Nota: La imagen NO se carga, es solo un placeholder -->
+            <img src="https://placehold.co/320x180/ef4444/ffffff?text=Contenido+del+Post" alt="Imagen de gatito placeholder" onerror="this.src='https://placehold.co/320x180/ef4444/ffffff?text=Contenido+del+Post'">
+            <p class="mt-3">Este `article` es la mejor demostración del Box Model. Tiene un **Padding** interno (espacio blanco), un **Borde** rojo grueso y un **Margin** exterior que lo separa de los demás posts.</p>
+        </article>
+        
+        <article class="post">
+            <h2 class="text-xl font-bold mb-2">Título de mi post 2</h2>
+            <p class="text-sm italic">Descripción de mi post 2</p>
+            <img src="https://placehold.co/320x180/3b82f6/ffffff?text=Post+2" alt="Imagen de perrito placeholder" onerror="this.src='https://placehold.co/320x180/3b82f6/ffffff?text=Post+2'">
+            <p class="mt-3">El `box-sizing: border-box` asegura que el ancho máximo de $320\text{px}$ ya incluye el padding y el borde, ¡así es más fácil diseñar!</p>
+        </article>
+        
+        <article class="post">
+            <h2 class="text-xl font-bold mb-2">Título de mi post 3</h2>
+            <p class="text-sm italic">Descripción de mi post 3</p>
+            <img src="https://placehold.co/320x180/10b981/ffffff?text=Post+3" alt="Imagen de patito placeholder" onerror="this.src='https://placehold.co/320x180/10b981/ffffff?text=Post+3'">
+            <p class="mt-3">Recuerda: Contenido, Padding, Borde y Margen. Esos son los cuatro componentes clave de todo elemento HTML.</p>
+        </article>
+    </section>
+    
+    <footer>
+        <a href="#titulo">Ir al comienzo</a>
+        <br>
+        <a href="mailto:nlopezalvarez@gmail.com">Contáctame aquí</a>
+        <p class="mt-2">Copyright 2025</p>
+    </footer>
+</body>
+</html>
