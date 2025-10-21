@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">CSS y XHTML</h1>
+    <p>
+        CSS es el mecanismo que permite separar los <strong>contenidos</strong> definidos mediante XHTML y el <span class="destacado">aspecto</span>
+        que deben presentar esos contenidos.
+    </p>
+    <h2 id="subtitulo">Ventajas de las hojas de estilo</h2>
+    <p>
+        Una ventaja añadida de la separación de los contenidos y su presentación es que los documentos creados con el
+        <a href="http://www.w3.org/MarkUp/">E<em>x</em>tensible <em>H</em>yperText <em>M</em>arkup <em>L</em>anguage </a>
+        (XHTML) son más flexibles, ya que se adaptan mejor a las diferentes plataformas: <span class="especial">pantallas de ordenador</span>,
+        pantallas de dispositivos móviles, impresoras y dispositivos utilizados por personas discapacitadas.
+    </p>
+
+    <table summary="Descripción de la tabla y su contenido">
+        <caption>Ejemplo de tabla formateada con CSS</caption>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col" class="especial">Título sup. columna 1</th>
+                <th scope="col" class="especial">Título sup. columna 2</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Título inf. columna 1</th>
+                <th scope="col">Título inf. columna 2</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row" class="especial">Título fila 1</th>
+                <td>Contenido de la celda</td>
+                <td>Contenido de la <em>celda</em></td>
+            </tr>
+            <tr>
+                <th scope="row">Título fila 2</th>
+                <td>Contenido de la <strong>celda</strong></td>
+                <td>Contenido de la celda</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="adicional">
+        <p>La flexibilidad de <span>HTML</span> puede parecer un aspecto positivo, pero el resultado final son páginas
+        con un código HTML desordenado, difícil de mantener y muy poco profesional. Afortunadamente, <span>XHTML</span>
+        soluciona estos problemas añadiendo ciertas normas en la forma de escribir las etiquetas y atributos. </p>
+        <p>A continuación se muestran las cinco restricciones básicas que introduce <span class="especial">XHTML</span> respect
+        a <span class="especial">HTML</span> en la sintaxis de sus etiquetas: </p>
+        <p>Las etiquetas se tienen que cerrar de acuerdo a como se abren, los nombres de las etiquetas y atributos siempre
+        se escriben en minúsculas, el valor de los atributos siempre se encierra con comillas, los atributos no se pueden
+        <a href="#">comprimir</a>, y por último, todas las etiquetas deben cerrarse siempre.</p>
+    </div>
+</body>
+</html>

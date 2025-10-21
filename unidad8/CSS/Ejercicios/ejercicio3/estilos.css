@@ -1,0 +1,27 @@
+
+/*-- Cabecera --------------------------------------------------------*/
+header {border: 1px solid blue;}
+header div {border: 1px solid yellow; float: left;}
+header img {max-height: 2em; vertical-align: middle;}
+header form {text-align: right; float: right; border: 1px solid magenta}
+
+/*-- Menú ------------------------------------------------------------*/
+nav ul { padding: 0;}
+nav li { float: left; list-style: none; }
+header nav { clear: both; }
+footer nav li {border-right: 1px solid darkgray; padding-left: 0.5em; padding-right: 0.5em;}
+footer nav li:last-child {border-right: none; }
+
+/*-- Lateral ---------------------------------------------------------*/
+aside { float: left; width: 20%; }
+
+/*-- Contenido -------------------------------------------------------*/
+main { float: right; width: 78%; }
+#principal { float: left; width: 77%; }
+#secundario { float: right; width: 20%; }
+#principal article img { width: 100px; float: left; border: none; }
+
+/*-- Pie de página ---------------------------------------------------*/
+footer {border: 1px solid red;}
+footer nav { float: left; }
+footer small { float: right; }
