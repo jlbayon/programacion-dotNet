@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- Documento HTML5 en español, con tema oscuro y dirección de texto de izquierda a derecha -->
+  <html lang="es" data-theme="dark" dir="ltr">
+
+  <head>
+    <!-- Declaramos el conjunto de caracteres (UTF-8) para admitir acentos, ñ, etc. -->
+    <meta charset="UTF-8" />
+
+    <!-- Hacemos que el diseño sea responsive (se adapta al ancho del dispositivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título de la pestaña del navegador -->
+    <title>JavaScript + JSON: Ejemplo práctico</title>
+
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilo.css" />
+    
+    <!-- Cargamos el script externo, con "defer" para que se ejecute después de cargar el HTML -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- Título principal de la página -->
+    <h1>JavaScript + JSON — Ejemplo práctico</h1>
+    
+    <!-- Contenedor principal con diseño en cuadrícula -->
+    <div class="grid">
+
+      <!-- Panel 1: Ejemplo de uso de fetch() para consumir una API -->
+      <section class="card">
+        <h2>1) Consumir API (GET) y mostrar JSON</h2>
+
+        <!-- Botones de acción -->
+        <div class="row">
+          <button id="btnCargar">Cargar usuarios (API pública)</button>
+          <button id="btnLimpiar">Limpiar lista</button>
+        </div>
+
+        <!-- Párrafo donde se mostrará el texto correspondiente al estado (cargando, error, éxito, etc.) -->
+        <p id="estadoApi" class="muted">Pulsa “Cargar usuarios”.</p>
+
+        <!-- Contenedor donde se listarán los usuarios obtenidos -->
+        <div id="listaUsuarios" class="list" aria-live="polite"></div>
+
+        <!-- Sección desplegable con el JSON crudo recibido de la API -->
+        <details style="margin-top:10px;">
+          <summary>Ver JSON crudo</summary>
+          <!-- Aquí se imprimirá el JSON en texto -->
+          <pre id="jsonCrudo">{}</pre>
+        </details>
+      </section>
+
+      <!-- Panel 2: Ejemplo de formulario que se convierte a JSON -->
+      <section class="card">
+        <h2>2) Formulario → JSON (y POST simulado)</h2>
+
+        <!-- Formulario con tres campos: nombre, email y rol -->
+        <form id="formUsuario">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" placeholder="Ada Lovelace" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="ada@example.com" required />
+
+          <label for="rol">Rol</label>
+          <select id="rol" name="rol">
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+          </select>
+
+          <!-- Botones: enviar (submit) y rellenar automáticamente -->
+          <div class="row" style="margin-top:10px;">
+            <button type="submit">Serializar y enviar</button>
+            <button type="button" id="btnRellenar">Rellenar demo</button>
+          </div>
+        </form>
+
+        <!-- Estado del formulario (mensajes de envío o error) -->
+        <p id="estadoForm" class="muted">Completa el formulario y envía.</p>
+
+        <!-- Sección desplegable donde se muestra el JSON generado -->
+        <details style="margin-top:10px;">
+          <summary>JSON generado</summary>
+          <pre id="jsonForm">{}</pre>
+        </details>
+      </section>
+
+      <!-- Panel 3: Validación y formateo de JSON -->
+      <section class="card">
+        <h2>3) Validar/parsear JSON de un <code>&lt;textarea&gt;</code></h2>
+
+        <!-- Área de texto donde el usuario puede escribir o pegar JSON -->
+        <textarea id="ta" rows="8" placeholder='{"nombre":"Ada","edad":28}'></textarea>
+
+        <!-- Botones para validar y formatear el JSON -->
+        <div class="row" style="margin-top:10px;">
+          <button id="btnValidar">Validar JSON</button>
+          <button id="btnBonito">Formatear (pretty print)</button>
+        </div>
+
+        <!-- Mensajes de estado: si el JSON es válido o tiene errores -->
+        <p id="estadoJson" class="muted">Pega un JSON y pruébalo.</p>
+      </section>
+
+      <!-- Panel 4: Ejemplo de uso de localStorage -->
+      <section class="card">
+        <h2>4) Guardar / leer JSON en <code>localStorage</code></h2>
+
+        <!-- Botones para guardar, leer, limpiar o borrar datos -->
+        <div class="row">
+          <button id="btnGuardarLs">Guardar ajustes</button>
+          <button id="btnLeerLs">Leer ajustes</button>
+          <button id="btnLimpiarLs">Limpiar</button>
+          <button id="btnBorrarLs">Borrar</button>
+        </div>
+
+        <!-- Información sobre la clave usada -->
+        <p class="muted">Clave usada: <code>app:settings</code></p>
+
+        <!-- Aquí se mostrará el JSON guardado o leído -->
+        <pre id="jsonLs">{}</pre>
+      </section>
+
+    </div> <!-- Fin del contenedor principal -->
+
+  </body>
+
+</html>

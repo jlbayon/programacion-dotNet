@@ -1,0 +1,158 @@
+/* Variables de colores y estilos globales */
+:root {
+  /* Fondo principal de la página */
+  --bg: #0f172a;
+  /* Fondo de las tarjetas (secciones) */
+  --card: #111827;
+  /* Color de texto secundario o atenuado */
+  --muted: #94a3b8;
+  /* Color verde para mensajes o acentos */
+  --accent: #22c55e;
+  /* Color rojo para errores */
+  --error: #ef4444;
+  /* Color del borde general */
+  --border: #1f2937;
+}
+
+/* Asegura que el padding y border no aumenten el tamaño total de los elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos base del cuerpo (body) */
+body {
+  margin: 0; /* Quitamos el margen por defecto del navegador */
+  padding: 32px; /* Espaciado interior general */
+  background: var(--bg); /* Color de fondo tomado de la variable */
+  color: #e5e7eb; /* Color del texto */
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* Fuente moderna con alternativas y altura de línea 1.5 */
+}
+
+/* Estilos para encabezados */
+h1,
+h2 {
+  margin: 0 0 12px; /* Quita el margen superior y deja margen inferior */
+}
+
+h1 {
+  font-size: 1.6rem; /* Tamaño grande para título principal */
+}
+
+h2 {
+  font-size: 1.2rem; /* Tamaño un poco menor */
+  color: var(--muted); /* Color gris atenuado */
+}
+
+/* Contenedor principal con diseño en cuadrícula */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna por defecto */
+  gap: 16px; /* Espacio entre filas o columnas */
+}
+
+/*  Adaptación responsive: dos columnas en pantallas grandes */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Estilos para cada tarjeta (panel de contenido) */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+}
+
+/* Etiquetas de formulario */
+label {
+  display: block; /* Ocupa toda la línea */
+  margin: 8px 0 6px; /* Espaciado vertical */
+  color: var(--muted); /* Color gris tenue */
+}
+
+/* Campos de formulario: input, textarea, select y botones */
+input,
+button,
+textarea,
+select {
+  width: 100%; /* Que ocupen todo el ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 1px solid var(--border); /* Borde gris oscuro */
+  background: #0b1220; /* Fondo oscuro */
+  color: #e5e7eb; /* Texto claro */
+}
+
+/* Botones */
+button {
+  cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+  background: #1e293b; /* Color base del botón */
+  transition: 0.2s; /* Transición suave para efectos hover */
+}
+
+/* Efecto al pasar el ratón por encima del botón */
+button:hover {
+  background: #0b2237; /* Oscurece ligeramente el color */
+}
+
+/* Contenedor de elementos en fila */
+.row {
+  display: flex;
+  gap: 8px; /* Espaciado entre elementos */
+}
+
+/* Los elementos dentro de .row ocupan la misma proporción */
+.row > * {
+  flex: 1;
+}
+
+/* Clase para textos de éxito */
+.ok {
+  color: var(--accent); /* Verde */
+}
+
+/* Clase para textos de error */
+.err {
+  color: var(--error); /* Rojo */
+}
+
+/* Estilo de bloques <pre> para mostrar JSON o código */
+pre {
+  background: #0b1220; /* Fondo oscuro */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  overflow: auto; /* Permite desplazamiento si hay texto largo */
+}
+
+/* Texto atenuado */
+.muted {
+  color: var(--muted);
+}
+
+/* Etiquetas pequeñas tipo “pill” (como chips o insignias) */
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px; /* Forma totalmente redondeada */
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* Listas de elementos (usuarios, por ejemplo) */
+.list {
+  display: grid;
+  gap: 8px; /* Espaciado entre ítems */
+}
+
+/* Cada elemento de lista */
+.item {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0b1220; /* Fondo oscuro para contraste */
+}
